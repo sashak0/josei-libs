@@ -1,0 +1,27 @@
+<mat-form-field appearance="fill">
+  <input
+    #input
+    matInput
+    [matDatepicker]="dp"
+    [formControl]="formControl"
+    [placeholder]="formYearMonthDate | ymdToString"
+  />
+  <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+  <mat-datepicker
+    #dp
+    startView="multi-year"
+    [touchUi]="touchUi"
+    (yearSelected)="chosenYearHandler($event)"
+    (monthSelected)="chosenMonthHandler($event)"
+    (closed)="chosenDayHandler()"
+  >
+    <mat-datepicker-actions>
+      <button mat-button matDatepickerCancel (click)="cancel()">
+        {{ cancelLabel }}
+      </button>
+      <button mat-raised-button color="primary" matDatepickerApply>
+        {{ applyLabel }}
+      </button>
+    </mat-datepicker-actions>
+  </mat-datepicker>
+</mat-form-field>

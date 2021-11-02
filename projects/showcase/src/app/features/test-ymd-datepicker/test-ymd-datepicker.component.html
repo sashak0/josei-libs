@@ -1,0 +1,12 @@
+<div class="d-flex justify-content-between">
+  <josei-ymd-datepicker
+    [(yearMonthDate)]="yearMonthDate"
+  ></josei-ymd-datepicker>
+
+  <div>
+    <br />
+    {{ yearMonthDate | ymdToString }}
+    <br />
+    {{ yearMonthDate | json }}
+  </div>
+</div>

@@ -7,12 +7,10 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "paths": {
-      "@josei/filters/*": [
-        "projects/filters/*",
-        "projects/filters"
+      "filters/*": [
+        "projects/filters/*"
       ],
-      "@josei/filters": [
-        "dist/filters/*",
+      "filters": [
         "dist/filters"
       ]
     },
